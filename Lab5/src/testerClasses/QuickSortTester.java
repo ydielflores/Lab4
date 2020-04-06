@@ -13,7 +13,7 @@ public class QuickSortTester {
 		
 		TestingUtils.displayListElements("Original Data", data);
 		
-		Comparator<Integer> cmp = new IntegerComparator1();
+		Comparator<Integer> cmp = new IntegerComparator2();
 		QuickSort<Integer> sorter = new QuickSort<>(cmp); 
 		 
 		sorter.sortList(data);

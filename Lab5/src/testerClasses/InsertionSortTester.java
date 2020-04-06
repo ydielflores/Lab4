@@ -13,7 +13,7 @@ public class InsertionSortTester {
 		
 		TestingUtils.displayListElements("Original Data", data);
 		
-		Comparator<Integer> cmp = new IntegerComparator1();
+		Comparator<Integer> cmp = new IntegerComparator2();
 		InsertionSort<Integer> sorter = new InsertionSort<>(cmp); 
 		 
 		sorter.sortList(data);

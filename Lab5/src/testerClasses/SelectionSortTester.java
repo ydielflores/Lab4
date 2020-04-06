@@ -13,7 +13,7 @@ public class SelectionSortTester {
 		
 		TestingUtils.displayListElements("Original Data", data);
 		
-		Comparator<Integer> cmp = new IntegerComparator1();
+		Comparator<Integer> cmp = new IntegerComparator2();
 		SelectionSort<Integer> sorter = new SelectionSort<>(cmp); 
 		 
 		sorter.sortList(data);

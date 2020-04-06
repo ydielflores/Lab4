@@ -13,7 +13,7 @@ public class BubbleSortTester {
 		
 		TestingUtils.displayListElements("Original Data", data);
 		
-		Comparator<Integer> cmp = new IntegerComparator1();
+		Comparator<Integer> cmp = new IntegerComparator2();
 		BubbleSort<Integer> sorter = new BubbleSort<>(cmp); 
 		 
 		sorter.sortList(data);
