@@ -29,8 +29,17 @@ public class MergeSort<E> extends AbstractSortingStrategy<E> {
 	 * @param first  The index of first position in portion to be sorted
 	 * @param last   The index of last  position in portion to be sorted
 	 */
+	@SuppressWarnings("unchecked")
 	private void ms(ArrayList<E> data, int first, int last) {
 		// ADD CODE HERE 1
+		if(first<last) {
+			int mid = (first+last)/2;
+			
+			ms(data,first,mid);
+			ms(data,mid+1,last);
+			
+			merge(data,first,mid,last);
+		}
 	}
 
 	/**

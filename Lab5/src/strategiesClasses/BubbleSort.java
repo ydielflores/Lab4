@@ -8,7 +8,7 @@ public class BubbleSort<E> extends AbstractSortingStrategy<E> {
 	public BubbleSort(Comparator<E> cmp) { 
 		super("BubbleSort", cmp); 
 	}
-	
+
 	@Override
 	public void sortList(ArrayList<E> dataSet) {
 		int n = dataSet.size(); 
@@ -21,6 +21,17 @@ public class BubbleSort<E> extends AbstractSortingStrategy<E> {
 		 *    SortingUtils.swapListElements(dataSet, i, j); 
 		 *    assuming that i and j are indexes within dataSet.
 		 */
-	}
+		boolean swapped;
+		do {
+			swapped = false;
 
+			for(int i = 1; i<n; i++) {
+				if(cmp.compare(dataSet.get(i-1), dataSet.get(i))>0) {
+					SortingUtils.swapListElements(dataSet, i-1, i);
+					swapped = true;
+				}
+			}
+		}while(swapped);
+
+	}
 }

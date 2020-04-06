@@ -18,6 +18,15 @@ public class InsertionSort<E> extends AbstractSortingStrategy<E> {
 		 * To compare two values, use something like:
 		 *    if (cmp.compare(dataSet.get(?), valToInsert) > 0)
 		 */
+		for(int i = 1; i < n; i++) {
+			E obj = dataSet.get(i);
+			int j = i - 1;
+			while(j>=0 && cmp.compare(dataSet.get(j), obj)>0) {
+				dataSet.set(j+1, dataSet.get(j));
+				j--;
+			}
+			dataSet.set(j+1, obj);
+		}
 	}
-
+	
 }

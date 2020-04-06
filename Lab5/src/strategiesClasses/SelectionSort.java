@@ -23,6 +23,17 @@ public class SelectionSort<E> extends AbstractSortingStrategy<E> {
 		 *    SortingUtils.swapListElements(dataSet, sm, i); 
 		 *    assuming that sm and i are indexes within dataSet.
 		 */
+		
+		for(int i = 0; i < n-2; i++) {
+			int sm = i;
+			for(int j = i+1; j <n ; j++) {
+				if(cmp.compare(dataSet.get(j), dataSet.get(sm)) < 0) {
+					sm=j;
+					
+				}
+			}
+			SortingUtils.swapListElements(dataSet, sm, i);
+		}
 	}
 
 }
